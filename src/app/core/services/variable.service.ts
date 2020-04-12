@@ -5,9 +5,13 @@ import { Injectable } from '@angular/core';
 })
 export class VariableService {
 
+  // Local Storage
+  static USER_DATA = 'userData';
+
   // Navigation URL
   static LOGIN = '/login';
   static ADMIN_DASHBOARD = '/admin/dashboard';
+  static ADMIN_COMPANY = '/admin/company-detail';
 
   // API URL
   static API_URL = 'https://new-backen.herokuapp.com/api';
