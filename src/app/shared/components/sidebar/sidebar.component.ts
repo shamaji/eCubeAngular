@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { VariableService } from 'app/core/services/variable.service';
 
 declare const $: any;
 declare interface RouteInfo {
@@ -10,8 +12,9 @@ declare interface RouteInfo {
 export const ROUTES: RouteInfo[] = [
   { path: '/admin/dashboard', title: 'Dashboard', icon: 'dashboard', class: '' },
   { path: '/admin/company-detail', title: 'Company Detail', icon: 'person', class: '' },
-  { path: '/admin/user-profile', title: 'User Profile', icon: 'person', class: '' },
-  { path: '/admin/table-list', title: 'Table List', icon: 'content_paste', class: '' }
+  { path: '/admin/gamezone', title: 'GameZone', icon: 'person', class: '' },
+  // { path: '/admin/user-profile', title: 'User Profile', icon: 'person', class: '' },
+  // { path: '/admin/table-list', title: 'Table List', icon: 'content_paste', class: '' }
 ];
 
 @Component({
@@ -22,7 +25,7 @@ export const ROUTES: RouteInfo[] = [
 export class SidebarComponent implements OnInit {
   menuItems: any[];
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
     this.menuItems = ROUTES.filter(menuItem => menuItem);
@@ -33,4 +36,9 @@ export class SidebarComponent implements OnInit {
     }
     return true;
   };
+
+  logout() {
+    localStorage.removeItem(VariableService.USER_DATA);
+    this.router.navigate([VariableService.LOGIN]);
+  }
 }

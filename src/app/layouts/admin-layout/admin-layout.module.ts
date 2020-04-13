@@ -14,6 +14,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatSelectModule} from '@angular/material/select';
 import { CompanyDetailComponent } from '../company-detail/company-detail.component';
+import { GameZoneComponent } from '../game-zone/game-zone.component';
 
 @NgModule({
   imports: [
@@ -31,6 +32,7 @@ import { CompanyDetailComponent } from '../company-detail/company-detail.compone
   declarations: [
     DashboardComponent,
     CompanyDetailComponent,
+    GameZoneComponent,
     UserProfileComponent,
     TableListComponent,
     NotificationsComponent

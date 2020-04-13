@@ -27,6 +27,7 @@ export class VariableService {
   static PATTERN_FOR_ALPHABATES_AND_SPACE = '^([a-zA-Z][a-zA-Z ]*)$';
   static PATTERN_FOR_ALPHABATES_NUMBER_AND_SPACE = '^([a-zA-Z0-9][a-zA-Z0-9 ]*)';
   static PATTERN_FOR_GST_NO = /\d{2}[A-Z]{5}\d{4}[A-Z]{1}\d[Z]{1}[A-Z\d]{1}/;
+  static PATTERN_FOR_MOBILE_NO = '[+]?[0-9]{10}$';
   static PATTERN_FOR_PHONE_NO = '[+]?[0-9]{1,20}$';
   static PATTERN_FOR_NUMBER = '^[0-9]*$';
   static PATTERN_FOR_PINCODE = '^[0-9]{6}$';
