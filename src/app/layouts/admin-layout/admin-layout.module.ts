@@ -15,6 +15,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatSelectModule} from '@angular/material/select';
 import { CompanyDetailComponent } from '../company-detail/company-detail.component';
 import { GameZoneComponent } from '../game-zone/game-zone.component';
+import { UserTypeComponent } from '../user-type/user-type.component';
 
 @NgModule({
   imports: [
@@ -33,6 +34,7 @@ import { GameZoneComponent } from '../game-zone/game-zone.component';
     DashboardComponent,
     CompanyDetailComponent,
     GameZoneComponent,
+    UserTypeComponent,
     UserProfileComponent,
     TableListComponent,
     NotificationsComponent
