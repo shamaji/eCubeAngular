@@ -16,6 +16,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { CompanyDetailComponent } from '../company-detail/company-detail.component';
 import { GameZoneComponent } from '../game-zone/game-zone.component';
 import { UserTypeComponent } from '../user-type/user-type.component';
+import { UsersComponent } from '../users/users.component';
 
 @NgModule({
   imports: [
@@ -35,6 +36,7 @@ import { UserTypeComponent } from '../user-type/user-type.component';
     CompanyDetailComponent,
     GameZoneComponent,
     UserTypeComponent,
+    UsersComponent,
     UserProfileComponent,
     TableListComponent,
     NotificationsComponent

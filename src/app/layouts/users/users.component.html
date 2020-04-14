@@ -1,0 +1,220 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title ">User List</h4>
+                        <p class="card-category"> List of users.</p>
+
+                        <button class="btn btn-info pull-right mrgtop" data-toggle="modal" data-target="#userAdd">
+                            Add
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead class=" text-primary">
+                                    <th> # </th>
+                                    <th> First Name </th>
+                                    <th> last Name </th>
+                                    <th> User Name </th>
+                                    <th> Password </th>
+                                    <th> Mobile </th>
+                                    <th> User Type </th>
+                                    <th> Status </th>
+                                    <th> Action </th>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let game of userList; let i=index;">
+                                        <td> {{game.id}} </td>
+                                        <td> {{game.firstName}} </td>
+                                        <td> {{game.lastName}} </td>
+                                        <td> {{game.userName}} </td>
+                                        <td> {{game.password}} </td>
+                                        <td> {{game.mobile}} </td>
+                                        <td> {{game.userType}} </td>
+                                        <td> {{game.status}} </td>
+                                        <td>
+                                            <button class="bnt btn-danger mrg5">Delete</button>
+                                            <button class="bnt btn-info">Edit</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- userName add Popup Modal -->
+<div class="modal modal-angular fade" id="userAdd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <!-- <h4 class="margin-top">
+                Add userName
+            </h4> -->
+                <div class="separator"></div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header card-header-success">
+                                <h4 class="card-title">Users Add</h4>
+                            </div>
+                            <div class="card-body">
+                                <div>
+                                    <!-- firstName  -->
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <!-- <label>firstName Name</label> -->
+                                            <mat-form-field class="example-full-width">
+                                                <input matInput placeholder="First Name" type="text"
+                                                    [(ngModdel)]="userObj.firstName"
+                                                    [formControl]="userForm.controls['firstName']">
+                                            </mat-form-field>
+                                            <div class="text-danger">
+                                                <small class="text-danger"
+                                                    *ngIf="userForm.controls['firstName'].hasError('required') && userForm.controls['firstName'].touched">
+                                                    First Name is required.
+                                                </small>
+                                                <small class="text-danger"
+                                                    *ngIf="!userForm.controls['firstName'].hasError('required') && !userForm.controls['firstName'].valid && userForm.controls['firstName'].touched">
+                                                    Please Enter valid First Name.
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- lastName  -->
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <!-- <label>lastName Name</label> -->
+                                            <mat-form-field class="example-full-width">
+                                                <input matInput placeholder="Last Name" type="text"
+                                                    [(ngModdel)]="userObj.lastName"
+                                                    [formControl]="userForm.controls['lastName']">
+                                            </mat-form-field>
+                                            <div class="text-danger">
+                                                <small class="text-danger"
+                                                    *ngIf="userForm.controls['lastName'].hasError('required') && userForm.controls['lastName'].touched">
+                                                    Last Name is required.
+                                                </small>
+                                                <small class="text-danger"
+                                                    *ngIf="!userForm.controls['lastName'].hasError('required') && !userForm.controls['lastName'].valid && userForm.controls['lastName'].touched">
+                                                    Please Enter valid Last Name.
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- userName  -->
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <!-- <label>userName Name</label> -->
+                                            <mat-form-field class="example-full-width">
+                                                <input matInput placeholder="User Name" type="text"
+                                                    [(ngModdel)]="userObj.userName"
+                                                    [formControl]="userForm.controls['userName']">
+                                            </mat-form-field>
+                                            <div class="text-danger">
+                                                <small class="text-danger"
+                                                    *ngIf="userForm.controls['userName'].hasError('required') && userForm.controls['userName'].touched">
+                                                    userName is required.
+                                                </small>
+                                                <small class="text-danger"
+                                                    *ngIf="!userForm.controls['userName'].hasError('required') && !userForm.controls['userName'].valid && userForm.controls['userName'].touched">
+                                                    Please Enter valid userName.
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- password  -->
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <!-- <label>userName Name</label> -->
+                                            <mat-form-field class="example-full-width">
+                                                <input matInput placeholder="Password Name" type="text"
+                                                    [(ngModdel)]="userObj.password"
+                                                    [formControl]="userForm.controls['password']">
+                                            </mat-form-field>
+                                            <div class="text-danger">
+                                                <small class="text-danger"
+                                                    *ngIf="userForm.controls['password'].hasError('required') && userForm.controls['password'].touched">
+                                                    password is required.
+                                                </small>
+                                                <small class="text-danger"
+                                                    *ngIf="!userForm.controls['password'].hasError('required') && !userForm.controls['password'].valid && userForm.controls['password'].touched">
+                                                    Please Enter valid password.
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- mobile  -->
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <!-- <label>Mobile Name</label> -->
+                                            <mat-form-field class="example-full-width">
+                                                <input matInput placeholder="Mobile Number" type="text"
+                                                    [(ngModdel)]="userObj.mobile"
+                                                    [formControl]="userForm.controls['mobile']">
+                                            </mat-form-field>
+                                            <div class="text-danger">
+                                                <small class="text-danger"
+                                                    *ngIf="userForm.controls['mobile'].hasError('required') && userForm.controls['mobile'].touched">
+                                                    mobile number is required.
+                                                </small>
+                                                <small class="text-danger"
+                                                    *ngIf="!userForm.controls['mobile'].hasError('required') && !userForm.controls['mobile'].valid && userForm.controls['mobile'].touched">
+                                                    Please Enter valid mobile number.
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- userType  -->
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <label>User Type : </label>
+                                            <!-- <mat-form-field class="example-full-width">
+                                                <input matInput placeholder="userType Number" type="text"
+                                                    [(ngModdel)]="userObj.userType"
+                                                    [formControl]="userForm.controls['userType']">
+                                            </mat-form-field> -->
+                                            <select [(ngModdel)]="userObj.userType" class="form-control"
+                                                [formControl]="userForm.controls['userType']">
+                                                <option>Admin</option>
+                                                <option>User</option>
+                                            </select>
+                                            <div class="text-danger">
+                                                <small class="text-danger"
+                                                    *ngIf="userForm.controls['userType'].hasError('required') && userForm.controls['userType'].touched">
+                                                    userType number is required.
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- gstin no -->
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <label>Status : </label>
+                                            <input placeholder="Status" type="checkbox" [(ngModdel)]="userObj.status">
+                                        </div>
+                                    </div>
+                                    <!-- save button - [disabled]="!loginForm.valid" -->
+                                    <button mat-raised-button type="submit" class="btn btn-success"
+                                        (click)="onSubmit()">Save</button>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
