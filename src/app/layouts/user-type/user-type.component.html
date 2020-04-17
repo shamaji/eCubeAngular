@@ -4,8 +4,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header card-header-danger">
-                        <h4 class="card-title ">userType</h4>
-                        <p class="card-category"> List of userTypes.</p>
+                        <h4 class="card-title ">User Types</h4>
 
                         <button class="btn btn-info pull-right mrgtop" data-toggle="modal" data-target="#gameAdd">
                             Add
@@ -24,10 +23,10 @@
                                     <tr *ngFor="let game of userTypeList; let i=index;">
                                         <td> {{game.id}} </td>
                                         <td> {{game.userType}} </td>
-                                        <td> {{game.status}} </td>
+                                        <td> {{game.status?'Active':'Inactive'}} </td>
                                         <td>
-                                            <button class="bnt btn-danger mrg5">Delete</button>
-                                            <button class="bnt btn-info">Edit</button>
+                                            <button class="bnt btn-info mrg5">Edit</button>
+                                            <button class="bnt btn-danger">Delete</button>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -56,7 +55,7 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header card-header-success">
-                                <h4 class="card-title">UserType Add</h4>
+                                <h4 class="card-title">New User Type</h4>
                             </div>
                             <div class="card-body">
                                 <div>

@@ -17,6 +17,7 @@ import { CompanyDetailComponent } from '../company-detail/company-detail.compone
 import { GameZoneComponent } from '../game-zone/game-zone.component';
 import { UserTypeComponent } from '../user-type/user-type.component';
 import { UsersComponent } from '../users/users.component';
+import { PlayersComponent } from '../players/players.component';
 
 @NgModule({
   imports: [
@@ -37,6 +38,7 @@ import { UsersComponent } from '../users/users.component';
     GameZoneComponent,
     UserTypeComponent,
     UsersComponent,
+    PlayersComponent,
     UserProfileComponent,
     TableListComponent,
     NotificationsComponent

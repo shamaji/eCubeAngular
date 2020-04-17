@@ -7,6 +7,7 @@ import { CompanyDetailComponent } from '../company-detail/company-detail.compone
 import { GameZoneComponent } from '../game-zone/game-zone.component';
 import { UserTypeComponent } from '../user-type/user-type.component';
 import { UsersComponent } from '../users/users.component';
+import { PlayersComponent } from '../players/players.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
@@ -14,6 +15,7 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'gamezone',     component: GameZoneComponent },
     { path: 'usertype',     component: UserTypeComponent },
     { path: 'users',     component: UsersComponent },
+    { path: 'players',     component: PlayersComponent },
     { path: 'user-profile',   component: UserProfileComponent },
     { path: 'table-list',     component: TableListComponent },
 ];

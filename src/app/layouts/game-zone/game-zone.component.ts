@@ -12,7 +12,7 @@ export class GameZoneComponent implements OnInit {
 
   // gameZoneObj = new GameZone();
   gameZoneObj: any = {};
-  gameZoneList: GameZone[] = [{ gzCode: 1, gzName: "game1", gzStatus: true }, { gzCode: 2, gzName: "game2", gzStatus: true }];
+  gameZoneList: GameZone[] = [{ gzCode: 1, gzName: "game1", gzStatus: true }, { gzCode: 2, gzName: "game2", gzStatus: false }];
   gzForm: FormGroup;
   constructor() { }
 

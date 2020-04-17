@@ -12,7 +12,7 @@ import { VariableService } from 'app/core/services/variable.service';
 })
 export class LoginComponent implements OnInit {
 
-  public loginRequest: any = {};
+  loginRequest: any = {};
   loginForm: FormGroup;
   loginError = '';
 
@@ -36,9 +36,9 @@ export class LoginComponent implements OnInit {
   }
 
   onLogin() {
-    console.log('here login')
+    console.log('here login : ', this.loginRequest);
     this.router.navigate([VariableService.ADMIN_DASHBOARD]);
-    return;
+    // return;
     // if (this.loginForm.valid) {
     //   this.apiService.loginMethod(VariableService.API_LOGIN, this.loginRequest, (response) => {
     //     if (!this.methodUtils.isNullUndefinedOrBlank(response)) {

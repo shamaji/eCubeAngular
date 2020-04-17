@@ -14,7 +14,7 @@ export class UsersComponent implements OnInit {
   userObj: any = {};
   userList: Users[] = [
     { id: 1, userType: "admin",userName: "one", password: '123', firstName: 'f', lastName: 'l', mobile: '12345678', status: true },
-    { id: 2, userType: "user", userName: "two", password: '123', firstName: 'a', lastName: 'b', mobile: '32323232', status: true }
+    { id: 2, userType: "user", userName: "two", password: '123', firstName: 'a', lastName: 'b', mobile: '32323232', status: false }
   ];
   userForm: FormGroup;
   constructor() { }

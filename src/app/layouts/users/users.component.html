@@ -4,9 +4,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header card-header-danger">
-                        <h4 class="card-title ">User List</h4>
-                        <p class="card-category"> List of users.</p>
-
+                        <h4 class="card-title ">Users</h4>
                         <button class="btn btn-info pull-right mrgtop" data-toggle="modal" data-target="#userAdd">
                             Add
                         </button>
@@ -17,9 +15,8 @@
                                 <thead class=" text-primary">
                                     <th> # </th>
                                     <th> First Name </th>
-                                    <th> last Name </th>
+                                    <th> Last Name </th>
                                     <th> User Name </th>
-                                    <th> Password </th>
                                     <th> Mobile </th>
                                     <th> User Type </th>
                                     <th> Status </th>
@@ -31,13 +28,12 @@
                                         <td> {{game.firstName}} </td>
                                         <td> {{game.lastName}} </td>
                                         <td> {{game.userName}} </td>
-                                        <td> {{game.password}} </td>
                                         <td> {{game.mobile}} </td>
                                         <td> {{game.userType}} </td>
-                                        <td> {{game.status}} </td>
+                                        <td> {{game.status?'Active':'Inactive'}} </td>
                                         <td>
-                                            <button class="bnt btn-danger mrg5">Delete</button>
-                                            <button class="bnt btn-info">Edit</button>
+                                            <button class="bnt btn-info mrg5">Edit</button>
+                                            <button class="bnt btn-danger">Delete</button>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -66,7 +62,7 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header card-header-success">
-                                <h4 class="card-title">Users Add</h4>
+                                <h4 class="card-title">New User</h4>
                             </div>
                             <div class="card-body">
                                 <div>
